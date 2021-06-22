@@ -1,19 +1,8 @@
-class Player
-    def initialize(name)
-        @name=name
-        @win = 0
-    end
+require "./game"
+require "./player"
 
-    def check(answer)
-        input = gets.chomp
-        if input == answer
-            @win += 1
-            puts "#{@name}: YES! You are correct."
-        else 
-            puts "#{@name}: Seriouly? No!"
-        end
-    end
-
-
-
-end
+game = Game.new
+p1 = Player.new("player1")
+p2 = Player.new("player2")
+puts "im here"
+game.start_game(p1, p2)

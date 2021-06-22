@@ -7,7 +7,7 @@ class Player
 
     attr_accessor :name,:max_round,:health
 
-    def show_score
+    def show
         "#{self.name}:#{health}/#{max_round}"
     end
 
